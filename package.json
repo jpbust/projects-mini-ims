@@ -1,0 +1,39 @@
+{
+  "name": "mvp",
+  "version": "1.0.0",
+  "description": "Mini Store inventory tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -d -watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpbust/hr-rfe4-mvp.git"
+  },
+  "keywords": [
+    "inventory",
+    "small",
+    "business"
+  ],
+  "author": "Juan Pablo Bustamante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpbust/hr-rfe4-mvp/issues"
+  },
+  "homepage": "https://github.com/jpbust/hr-rfe4-mvp#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "axios": "^0.21.1",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
