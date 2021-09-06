@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
-import NewProductModal from './NewProductModal.jsx'
+import {NewProductContainer} from './NewProduct.style.js'
+import NewProductModal from './NewProductChilds/NewProductModal.jsx'
+import Button1 from '../common/Button.js'
 
 
 var NewProduct = (props)=> {
@@ -18,15 +19,16 @@ var NewProduct = (props)=> {
   var renderModal = modalOnOff ? <NewProductModal/> : <></>
 
   return (
-    <>
-    <Button variant="primary" onClick={newProductClickHandler}> + New Product</Button>{' '}
-    <NewProductModal
+
+    <NewProductContainer>
+      <Button1 onClick={newProductClickHandler}> Add New Product</Button1>{' '}
+      <NewProductModal
             show={modalOnOff}
             onHide={() => setModalOnOff(false)}
       />
+    </NewProductContainer>
 
 
-    </>
   )
 
 

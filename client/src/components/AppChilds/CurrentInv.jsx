@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 const axios = require('axios');
-import CurrentInvIndividual from './CurrentInvIndividual.jsx'
+import CurrentInvIndividual from './CurrentInvChilds/CurrentInvIndividual.jsx'
+import {CurrentInvContainer} from './CurrentInv.style.js'
+
 
 
 var CurrentInv = ()=>{
@@ -26,10 +28,10 @@ var CurrentInv = ()=>{
 
   } else {
   return (
-    <>{products.map((product, index)=>
+    <CurrentInvContainer>{products.map((product, index)=>
       <CurrentInvIndividual key={index} product={product}/>
     )}
-    </>
+    </CurrentInvContainer>
   )
   }
 }

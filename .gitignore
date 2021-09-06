@@ -40,3 +40,5 @@ bower_components/
 package-lock.json
 
 bundle.js
+
+config.js
