@@ -16,5 +16,16 @@ module.exports = {
     models.getAPIUPC((data)=>{
       res.send(data)
     }, req.headers.upc)
+  },
+  patchDB: (req, res)=>{
+    // console.log(req.body)
+    models.patchOneEntry(req.body)
+    .then(()=>{res.sendStatus(200)})
+    .catch((error)=>{console.log(error)})
+  },
+  deleteDB: (req, res)=>{
+    models.deleteOneEntry(req.body.id)
+    .then(()=>{res.sendStatus(200)})
+    .catch((error)=>{console.log(error)})
   }
 }

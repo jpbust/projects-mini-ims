@@ -16,7 +16,7 @@ export var ImageContainer = styled.div`
   width: 90px;
   margin: 0px;
   padding: 0px;
-  border: 0px;
+  border: 1px solid red;
 
 
 `;
@@ -36,3 +36,41 @@ export var TextDescription2 = styled.div`
   padding: 0px;
   border: 0px;
 `;
+
+
+
+export var ModalContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+
+export var TopSide = styled.div`
+display: flex;
+width: 100%;
+height: 250px;
+
+`;
+
+
+
+export var LeftSide = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 30%;
+  margin: 0px;
+  padding: 0px;
+`;
+
+export var RightSide = styled.div`
+  width: 70%;
+  height: 100%;
+  border: 3px solid red;
+
+`;
+
+export var BottomSide = styled.div`
+width: 100%;
+`;
+

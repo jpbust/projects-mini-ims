@@ -13,13 +13,15 @@ DROP TABLE product;
     id SERIAL UNIQUE,
     UPC VARCHAR(50),
     ASIN VARCHAR(50),
-    product_name VARCHAR(150),
+    product_name VARCHAR(150) NOT NULL,
     image_url VARCHAR(1000),
     class VARCHAR(250),
     company VARCHAR(250),
     cost numeric,
     amazon_price numeric,
     qty integer,
+    min_stock integer,
+    notes VARCHAR(500),
     PRIMARY KEY (id)
   );
 

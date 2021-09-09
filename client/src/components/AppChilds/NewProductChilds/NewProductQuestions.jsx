@@ -26,9 +26,11 @@ var NewProductQuestions = (props)=>{
       })
       .then((response)=> {
 
-        if(response.data.asin) {setasinCode(response.data.asin)}
-        if(response.data.title) {setName(response.data.title)}
-        if(response.data.images[0]) {setImageURL(response.data.images[0])}
+        if(response.data.asin) {setasinCode(response.data.asin)};
+        if(response.data.title) {setName(response.data.title)};
+        if(response.data.images[0]) {setImageURL(response.data.images[0])};
+        setinitInv(1);
+
 
       })
       .catch((error)=> {
@@ -46,7 +48,7 @@ var NewProductQuestions = (props)=>{
 
   var handleSubmit = ()=>{
     if(UPC && Name && initInv) {
-      console.log('validation of 3 ')
+      // console.log('validation of 3 ')
 
       axios.post('/allProducts', {
         UPC,
@@ -55,8 +57,8 @@ var NewProductQuestions = (props)=>{
         imageURL,
         initInv,
       })
-      .then(function (response) {
-        console.log(response);
+      .then(()=> {
+        window.location.reload(false);
       })
       .catch(function (error) {
         console.log(error);
@@ -73,6 +75,9 @@ var NewProductQuestions = (props)=>{
 
   return (
     <>
+      <FloatingLabel controlId="productName" label="Product Name">
+      <Form.Control type="text" placeholder="Product Name" value={Name} onChange={(event)=>(setName(event.target.value))}/>
+    </FloatingLabel>
     <FloatingLabel controlId="floatingInput" label="UPC"  className="mb-3">
       <Form.Control type="text" placeholder="name@example.com" value={UPC} onChange={(event)=>(setUPC(event.target.value))}/>
     </FloatingLabel>
@@ -86,9 +91,7 @@ var NewProductQuestions = (props)=>{
       <Form.Control type="text" placeholder="ASIN Code" value={asinCode} onChange={(event)=>(setasinCode(event.target.value))}/>
     </FloatingLabel>
 
-    <FloatingLabel controlId="productName" label="Product Name">
-      <Form.Control type="text" placeholder="Product Name" value={Name} onChange={(event)=>(setName(event.target.value))}/>
-    </FloatingLabel>
+
 
     <FloatingLabel controlId="imageUrl" label="image Url">
       <Form.Control type="text" placeholder="image Url" value={imageURL} onChange={(event)=>(setImageURL(event.target.value))}/>

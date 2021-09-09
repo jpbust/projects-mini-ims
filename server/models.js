@@ -20,18 +20,11 @@ module.exports = {
       })
   },
   postNew: (cb, data)=>{
-
     var UPC =  data.UPC ? data.UPC : '';
     var ASIN = data.asinCode ? data.asinCode : '';
     var productName = data.Name ? data.Name : '' ;
     var imageUrl = data.imageURL? data.imageURL : '';
     var initInv = data.initInv? data.initInv : '';
-    // var clasS = ? : null;
-    // var company = ? : null;
-    // var cost ? : null;
-    // amazon_price,
-    // qty integer,
-
     var pgQuery = `
       INSERT INTO product
     (UPC,
@@ -62,11 +55,39 @@ module.exports = {
     return axios.get(url)
       .then((data)=>{
         cb(data.data.items[0])
-        // console.log('@@@@@@@@@@@@',data.data.items[0])
       })
       .catch((error)=>{
         console.log(error)
       })
-  }
+  },
+  patchOneEntry: (data) => {
+    var query =`
+    select * from product where id=1;
+    UPDATE
+      product
+    SET
+      UPC = '${data.upc}',
+      ASIN = '${data.asin}',
+      product_name = '${data.productName}',
+      class = '${data.classItem}',
+      company = '${data.publisher}',
+      qty = '${data.stockQuantity}'
+    WHERE
+      id=${data.id};
+    `;
 
+    return db.query(query)
+    .then(()=>{}) //console.log('success patch one', data)
+    .catch((error)=>{ console.log()})
+  },
+  deleteOneEntry: (data)=>{
+    var query=`
+    DELETE FROM
+      product
+    where id=${data}
+    `;
+    return db.query(query)
+    .then(()=>{})
+    .catch((error)=>{console.log('errorAtDeleteOneEntryModels', error)})
+  }
 }
