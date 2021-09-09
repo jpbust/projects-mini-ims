@@ -7,11 +7,6 @@ import axios from 'axios';
 
 export default function SingleProductModal(props) {
 
-
-
-
-
-
   return (
     <Modal
       show={props.show}
