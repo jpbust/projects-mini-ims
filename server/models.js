@@ -77,7 +77,7 @@ module.exports = {
     `;
 
     return db.query(query)
-    .then(()=>{}) //console.log('success patch one', data)
+    .then(()=>{console.log('success patch one')})
     .catch((error)=>{ console.log()})
   },
   deleteOneEntry: (data)=>{
@@ -87,7 +87,7 @@ module.exports = {
     where id=${data}
     `;
     return db.query(query)
-    .then(()=>{})
+    .then(()=>{console.log('successfully deleted one')})
     .catch((error)=>{console.log('errorAtDeleteOneEntryModels', error)})
   }
 }
