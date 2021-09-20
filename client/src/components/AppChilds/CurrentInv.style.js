@@ -10,3 +10,9 @@ export const CurrentInvContainer = styled.div`
   /* border: 1px solid red; */
 
 `;
+
+export const AllContainer = styled.div`
+
+  padding: 1%;
+
+`;

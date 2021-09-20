@@ -45,12 +45,10 @@ var App = ()=> {
       <AppContainer>
           <h1>Mini Inventory Management System </h1>
           <HeaderContainer>
-            <TotalCount> total products count: {count}
+            <TotalCount> Total products count: {count}
             </TotalCount>
             <TotalQuantity> Total individual unit quantity: {quantity}
             </TotalQuantity>
-            {/* <TotalSummary> Total Summary
-            </TotalSummary> */}
           </HeaderContainer>
           <NewProduct/>
           {products? <CurrentInv inventory={products}/> : <div>Loading...</div>}
