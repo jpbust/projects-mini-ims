@@ -3,14 +3,13 @@ var router = require('express').Router();
 
 
 //Connect controller methods to their corresponding routes
-router.get('/allProducts', controllers.get);
+router.get('/allProducts', controllers.getDB);
+router.post('/allProducts', controllers.postDB);
+router.patch('/allProducts', controllers.patchDB);
+router.delete('/allProducts', controllers.deleteDB);
 
-// router.get(`/products/:product_id`, controller.productFeatures.get);
-
-// router.get(`/products/:product_id/styles`, controller.productStyles.get);
-
-// router.get(`/products/:product_id/related`, controller.getRelated.get);
-
+//external API call
+router.get(`/fetchAPI`, controllers.getAPIUPC);
 
 
 

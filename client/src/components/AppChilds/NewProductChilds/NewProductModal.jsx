@@ -14,11 +14,11 @@ function NewProductModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Please complete info:
+          Insert new product info:
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <NewProductQuestions/>
+        <NewProductQuestions hide={props.onHide}/>
 
       </Modal.Body>
       <Modal.Footer>
