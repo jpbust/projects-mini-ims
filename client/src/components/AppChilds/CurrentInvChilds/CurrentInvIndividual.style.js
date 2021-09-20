@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 export const IndividualContainer = styled.div`
   display: flex;
-  /* padding: 15px; */
+  padding: 5px;
   margin: 5px;
-  width: 99%;
-  border: 3px solid blue;
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 7px 7px 3px grey;
 
 
 `;
@@ -16,25 +18,29 @@ export var ImageContainer = styled.div`
   width: 90px;
   margin: 0px;
   padding: 0px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 
 `;
 
 export var TextDescription = styled.div`
   justify-content: flex-start;
-  width: 45%;
+  width: 55%;
   margin: 0px;
   padding: 0px;
   border: 0px;
 `;
 
 export var TextDescription2 = styled.div`
-  justify-content: flex-start;
-  width: 45%;
+  /* justify-content: flex-start; */
+  display: flex;
+  align-items: center;
   margin: 0px;
   padding: 0px;
   border: 0px;
+  right: 0px;
+  justify-content: flex-end;
+
 `;
 
 

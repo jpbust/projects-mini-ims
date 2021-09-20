@@ -50,7 +50,7 @@ export default function SingleProductModal(props) {
         {props.showedit ? <Button variant="danger" onClick={props.cancelclickhandler}>Cancel changes</Button> : null}
         {props.showedit ? <Button variant="success" onClick={props.submitclickhandler}>Confirm changes</Button> : null}
         {props.showedit ? null : <Button onClick={props.editclickhandler}>Edit</Button>}
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onhide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

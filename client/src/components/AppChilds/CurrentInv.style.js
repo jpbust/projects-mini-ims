@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const CurrentInvContainer = styled.div`
 
   display: flex;
-  /* align-items: flex-start; */
-  /* flex-wrap: wrap; */
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 99%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 `;

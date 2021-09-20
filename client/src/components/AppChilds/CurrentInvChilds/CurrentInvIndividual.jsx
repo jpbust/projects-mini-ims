@@ -89,16 +89,12 @@ var CurrentInvIndividual = ({product})=>{
       <br></br>
       <span>Available Quantity: {product.qty} </span>
       </TextDescription>
+
       <TextDescription2>
-        <span>Amazon's ASIN: {renderAsin}</span>
-        <br></br>
-        {/* <span>Amazon Price: {renderAmzPrice}</span> */}
-
+        <Button variant="secondary" size="sm" active onClick={detailsButtonClickHandler}>
+          details
+        </Button>
       </TextDescription2>
-
-      <Button variant="secondary" size="sm" active onClick={detailsButtonClickHandler}>
-        details
-      </Button>
 
       <SingleProductModal
         productname={productName}
@@ -124,7 +120,7 @@ var CurrentInvIndividual = ({product})=>{
 
         noimgplaceholder={noImagePlaceholder}
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onhide={() => setModalShow(false)}
         renderimage={renderImage}
 
       />

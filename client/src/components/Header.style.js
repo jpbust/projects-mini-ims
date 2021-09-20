@@ -6,19 +6,19 @@ export const HeaderContainer = styled.div`
 
   /* background-color: blue; */
   width: 100%;
-  height: 100px;
-  border: 5px solid yellow;
-  justify-content: space-between;
-  /* background-color: grey; */
+  height: 50px;
+  border: 5px solid green;
+  justify-content: space-around;
+  background-color: RGB(0,204,102);
 
 
 `;
 
 export const TotalCount = styled.div`
   /* flex: 1; */
-  flex-basis: 25%;
+  flex-basis: 35%;
   /* height: 80px; */
-  border: 3px solid green;
+  /* border: 3px solid green; */
 
   padding: 10px;
 
@@ -26,9 +26,9 @@ export const TotalCount = styled.div`
 
 export const TotalQuantity = styled.div`
   /* flex: 1; */
-  flex-basis: 25%;
+  flex-basis: 35%;
   /* height: 80px; */
-  border: 3px solid green;
+  /* border: 3px solid green; */
 
   padding: 10px;
 
