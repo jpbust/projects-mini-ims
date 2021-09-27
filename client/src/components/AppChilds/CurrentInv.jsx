@@ -6,9 +6,6 @@ import {CurrentInvContainer, AllContainer} from './CurrentInv.style.js'
 
 
 var CurrentInv = ({inventory})=>{
-
-
-
   return (
     <AllContainer>
       <CurrentInvContainer>{inventory.map((product, index)=>
@@ -17,8 +14,7 @@ var CurrentInv = ({inventory})=>{
       </CurrentInvContainer>
     </AllContainer>
   )
-
-}
+};
 
 
 
